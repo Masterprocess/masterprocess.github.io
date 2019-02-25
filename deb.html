@@ -91,39 +91,12 @@
 	<div id="foreground" class="layer">
 		<img class="scale" src="img/foreground.png" />
 	</div>
-<!--
-	<div id="content">
-		<h2>You've tuned in to</h2>
-		<h1>The Deb of Night</h1>
+	<iframe src="audio/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+	<audio id="player" autoplay loop>
+			<source src="audio/rain.mp3" type="audio/mp3">
+	</audio>
+	<div id="credit">
+		Check out <a href="http://store.steampowered.com/app/2600/">Vampire: The Masquerade - Bloodlines</a> if you enjoy this.
 	</div>
--->
-	<div id="controls">
-		<audio controls="controls" id="radio">
-			<source type="audio/mp3" />
-			Your browser does not support the audio element.
-		</audio>
-	</div>
-	<iframe src="audio/rain.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-	</iframe>
-	<audio autoplay loop id="playAudio">
-		<source src="audio/rain.mp3">
-	</audio> 
-	<!-- <div id="controls2">
-		<audio controls="controls2" id="storm" autoplay loop>
-			<source type="audio/mp3" src="audio/rain.mp3" />
-		</audio>
-	</div> -->
-	<script>
-	var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    if(!isChrome){
-      $('#iframeAudio').remove()
-    }
-  else{
-     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
-  }
-	</script>
-	<!-- <div id="credit">
-		now go buy <a href="http://store.steampowered.com/app/2600/">vampire: the masquerade - bloodlines</a>
-	</div> -->
 </body>
 </html>
