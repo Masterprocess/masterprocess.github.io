@@ -21,25 +21,26 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-		<link href="css/agency.min.css" rel="stylesheet">
+		<link href="css/agency.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/global.css" />
 		
 		<!-- Favicons -->
-		<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-		<link rel="manifest" href="/favicons/manifest.json">
+		<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+		<link rel="manifest" href="favicons/manifest.json">
 		<meta name="msapplication-TileColor" content="#DA70D6">
-		<meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
+		<meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
 		<meta name="theme-color" content="#DA70D6">
 
 
@@ -68,7 +69,11 @@
 						</li>
 						<li class="nav-item">
               <a class="nav-link" href="./speedreader.html">Speed Reader</a>
-            </li>
+						</li>
+						<span onclick="document.getElementById('player').muted=!document.getElementById('player').muted; document.getElementById('radio').muted=document.getElementById('player').muted" class="fa-stack fa-2x changeColorOnHover">
+								<i class="fa fa-circle fa-stack-2x text-primary"></i>
+								<i class="fa fa-volume-off fa-stack-1x fa-inverse"></i>
+						</span>
             <!-- <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Skills</a>
             </li> -->
@@ -82,11 +87,35 @@
 
     <!-- Header -->
     <header class="masthead">
-      <div class="container">
+      <div class="container movePlz">
+					<div id="background" class="layer">
+							<img class="scale" src="img/background.jpg" />
+						</div>
+						<div id="rain" class="layer"></div>
+						<div id="foreground" class="layer">
+							<img class="scale" src="img/foreground.png" />
+						</div>
+						<div id="controls">
+							<audio controls="controls" style="display:none;" id="radio">
+								<source type="audio/mp3" />
+								Your browser does not support the audio element.
+							</audio>
+
+							<!-- <span onclick="document.getElementById('radio').pause()" class="fa-stack fa-3x">
+									<i class="fa fa-circle fa-stack-2x text-primary"></i>
+									<i class="fa fa-music fa-stack-1x fa-inverse"></i>
+							</span> -->
+						</div>
+						<iframe src="audio/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+						<audio id="player" autoplay loop>
+								<source src="audio/rain.mp3" type="audio/mp3">
+						</audio>
         <div class="intro-text">
-          <div class="intro-lead-in strokeme">Welcome To My Portfolio!</div>
-          <div class="intro-heading text-uppercase strokeme">It's Nice To Meet You</div>
-					<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Let's Get Acquainted!</a>
+					<div class="placeholderVampire">
+						<div class="intro-lead-in strokeme">Welcome To My Portfolio!</div>
+						<div class="intro-heading text-uppercase strokeme">It's Nice To Meet You</div>
+						<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Let's Get Acquainted!</a>
+					</div>
         </div>
       </div>
     </header>
@@ -97,7 +126,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Search No Further. Here's What I Can Do For You.</h3>
+						<h3 class="section-subheading text-muted">Search No Further. Here's What I Can Do For You.</h3>
           </div>
         </div>
         <div class="row text-center">
@@ -730,7 +759,8 @@
     <script src="js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/agency.min.js"></script>
+		<script src="js/agency.min.js"></script>
+		<script src="js/vampire.js"></script>
 
   </body>
 

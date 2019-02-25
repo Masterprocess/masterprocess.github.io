@@ -757,3 +757,15 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     -1px 1px 0 #000,
     1px 1px 0 #000;  
 }
+.placeholderVampire {
+	visibility: hidden;
+}
+
+@media (max-width: 768px) {
+	.movePlz{
+		margin-bottom: 250px;
+	}
+}
+.changeColorOnHover:hover {
+	color: #DF00FF;
+}
