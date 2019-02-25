@@ -5,9 +5,8 @@
 	<title>the deb of night</title>
 	<link rel="home" href="http://debofnight.com/" />
 	<link rel="stylesheet" type="text/css" media="screen" href="css/global.css" />
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css' />
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript">
 
 		ratio = 16/9;
@@ -66,9 +65,28 @@
 			<source type="audio/mp3" />
 			Your browser does not support the audio element.
 		</audio>
-		<audio id="storm" autoplay loop>
+	</div>
+	<iframe src="audio/rain.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+	</iframe>
+	<audio autoplay loop id="playAudio">
+		<source src="audio/rain.mp3">
+	</audio> 
+	<!-- <div id="controls2">
+		<audio controls="controls2" id="storm" autoplay loop>
 			<source type="audio/mp3" src="audio/rain.mp3" />
 		</audio>
-	</div>
+	</div> -->
+	<script>
+	var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#iframeAudio').remove()
+    }
+  else{
+     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
+  }
+	</script>
+	<!-- <div id="credit">
+		now go buy <a href="http://store.steampowered.com/app/2600/">vampire: the masquerade - bloodlines</a>
+	</div> -->
 </body>
 </html>

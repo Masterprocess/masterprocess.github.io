@@ -65,6 +65,15 @@ h1, h2, h3 {
 	opacity: .3;
 }
 
+#controls2 {
+	position: absolute;
+	bottom: 40px;
+	right: 80px;
+	color: #acc7df;
+	font-size: 12px;
+	opacity: .3;
+}
+
 #credit {
 	position: absolute;
 	bottom: 40px;
