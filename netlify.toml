@@ -1,5 +1,5 @@
 [build]
 base = "focal"
-command = "npm run build"
+command = "npm ci && npm run build"
 publish = "public"
 
