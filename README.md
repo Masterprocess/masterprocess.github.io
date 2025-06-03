@@ -102,7 +102,13 @@ The fastest way to combine your favorite tools and APIs to build the fastest sit
 
 ## Running tests
 
-Install dependencies and run:
+Install dependencies with:
+
+```bash
+npm ci
+```
+
+Then run the test suite:
 
 ```bash
 npm test
