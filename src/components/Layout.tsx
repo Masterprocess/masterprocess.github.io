@@ -1,8 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ children, showFooter = true }) => {
+export interface LayoutProps {
+  children: ReactNode;
+  showFooter?: boolean;
+}
+
+const Layout = ({ children, showFooter = true }: LayoutProps) => {
   return (
     <div className="flex min-h-screen flex-col font-sans">
       <Header />

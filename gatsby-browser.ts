@@ -4,4 +4,4 @@ import "./src/styles/global.css";
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/
  */
-module.exports = {};
+export {};
