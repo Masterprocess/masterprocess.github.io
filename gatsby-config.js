@@ -14,7 +14,9 @@ module.exports = {
     author: `@gatsbyjs`,
     siteUrl: `https://masterprocess.github.io`, // Updated to reflect my GitHub Pages URL
   },
-  pathPrefix: `/`, // This should be the root as it's a user or organization site
+  // This repository uses a GitHub Pages user site,
+  // so assets should be served from the root URL without a path prefix.
+  pathPrefix: `/`,
   plugins: [
     `gatsby-plugin-image`,
     {
