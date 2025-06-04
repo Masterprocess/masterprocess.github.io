@@ -1,5 +1,6 @@
 @import "variables";
-@import "~tailspin.css/prod/css/tailspin-all.min.css";
+// Tailspin CSS is included manually via CDN in index.html
+// @import "~tailspin.css/prod/css/tailspin-all.min.css";
 
 * {
   margin: 0;
