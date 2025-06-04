@@ -16,7 +16,6 @@ module.exports = {
   },
   pathPrefix: `/`, // This should be the root as it's a user or organization site
   plugins: [
-    '@chakra-ui/gatsby-plugin', // This is the Chakra UI plugin
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
