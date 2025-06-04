@@ -6,7 +6,14 @@ module.exports = {
     "./gatsby-browser.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        bauhausRed: '#ff0000',
+        bauhausYellow: '#ffff00',
+        bauhausBlue: '#0000ff',
+        bauhausBlack: '#000000',
+      },
+    },
   },
   plugins: [],
 }
