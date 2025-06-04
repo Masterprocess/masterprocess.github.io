@@ -4,6 +4,6 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/
  */
 
-import "./src/styles/global.scss";
+import "./src/styles/global.css";
 
 module.exports = {};
