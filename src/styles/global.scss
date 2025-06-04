@@ -1,0 +1,13 @@
+@import "_variables";
+@import "~tailspin.css/prod/css/tailspin-all.min.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  outline: 2px dashed $bauhaus-blue;
+  outline-offset: 0.25rem;
+}

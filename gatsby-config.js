@@ -16,8 +16,17 @@ module.exports = {
   },
   pathPrefix: `/`, // This should be the root as it's a user or organization site
   plugins: [
-    '@chakra-ui/gatsby-plugin', // This is the Chakra UI plugin
+    "@chakra-ui/gatsby-plugin", // This is the Chakra UI plugin
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          require(`postcss-pixels-to-rem`)({ rootValue: 16 }),
+          require(`postcss-preset-env`)({ browsers: "last 2 versions" }),
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,4 +49,4 @@ module.exports = {
       },
     },
   ],
-}
+};
