@@ -100,6 +100,10 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
 
+## Build output
+
+After running `npm run build`, the generated static files are stored in the `public/` directory. The `deploy` script publishes this folder to the `gh-pages` branch for GitHub Pages.
+
 ## Running tests
 
 Install dependencies with:
