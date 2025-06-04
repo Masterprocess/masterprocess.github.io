@@ -27,6 +27,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [require('tailspin.css')({ config: `./tailspin.config.js` })],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
