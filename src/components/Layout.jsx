@@ -1,14 +1,13 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Header from "./Header";
+import Footer from "./Footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, showFooter = true }) => {
   return (
     <div className="flex min-h-screen flex-col font-sans">
-      <Navbar />
+      <Header />
       <main className="flex-grow">{children}</main>
-      <footer className="bg-bauhausBlack py-4 text-center text-white">
-        © {new Date().getFullYear()} Zoe Rackley
-      </footer>
+      {showFooter && <Footer />}
     </div>
   );
 };
