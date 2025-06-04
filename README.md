@@ -121,3 +121,9 @@ npm test
 This will run the Jest test suite.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## Design System
+
+Tailspin CSS has been removed. The project now includes a placeholder file
+`src/styles/design-system.scss` for integrating a new design system in future
+updates.
