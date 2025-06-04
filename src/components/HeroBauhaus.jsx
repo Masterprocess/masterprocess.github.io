@@ -1,10 +1,10 @@
 import React from "react";
 
-const HeroBauhaus = () => {
+const HeroBauhaus = ({ intro, ctaText, ctaLink }) => {
   return (
     <section
       id="welcome"
-      className="relative flex h-96 items-center justify-center bg-bauhausYellow overflow-hidden"
+      className="relative flex h-96 flex-col items-center justify-center bg-bauhausYellow overflow-hidden text-center space-y-4"
     >
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 h-48 w-48 bg-bauhausBlue"></div>
@@ -14,6 +14,17 @@ const HeroBauhaus = () => {
       <h1 className="relative text-4xl font-bold text-bauhausBlack">
         Welcome to my portfolio
       </h1>
+      {intro && (
+        <p className="relative max-w-lg text-lg text-bauhausBlack">{intro}</p>
+      )}
+      {ctaText && ctaLink && (
+        <a
+          href={ctaLink}
+          className="relative inline-block rounded bg-bauhausRed px-4 py-2 font-semibold text-white hover:bg-bauhausBlack"
+        >
+          {ctaText}
+        </a>
+      )}
     </section>
   );
 };
