@@ -10,15 +10,18 @@ const Layout = ({ children }) => {
             Zoe Rackley
           </Link>
           <nav className="space-x-4">
-            <Link to="/" className="hover:underline">
+            <a href="#welcome" className="hover:underline">
               Home
-            </Link>
-            <Link to="/resume" className="hover:underline">
-              Resume
-            </Link>
-            <Link to="/contact" className="hover:underline">
+            </a>
+            <a href="#about" className="hover:underline">
+              About
+            </a>
+            <a href="#work" className="hover:underline">
+              Work
+            </a>
+            <a href="#contact" className="hover:underline">
               Contact
-            </Link>
+            </a>
           </nav>
         </div>
       </header>
