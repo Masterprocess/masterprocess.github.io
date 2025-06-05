@@ -22,7 +22,7 @@ export const query = graphql`
 
 const BlogIndex = ({ data }) => (
   <Layout>
-    <section className="max-w-2xl mx-auto py-12 space-y-8">
+    <section className="max-w-2xl mx-auto py-12 pt-20 space-y-8">
       {data.allMdx.nodes.map((post) => (
         <article key={post.fields.slug}>
           <h2 className="text-xl font-bold">
