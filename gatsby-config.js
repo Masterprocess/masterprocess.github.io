@@ -46,7 +46,9 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         mdxOptions: {
+
           remarkPlugins: [gfm],
+
           // rehypePlugins: [],           // add any HTML-side plugins later
         },
         gatsbyRemarkPlugins: [], // if you decide to use gatsby-remark plugins
