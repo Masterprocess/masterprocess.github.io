@@ -53,7 +53,6 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   if (result.errors) throw result.errors;
-
   result.data.allMdx.nodes.forEach(({ id, internal, fields: { slug } }) => {
     createPage({
       path: slug,

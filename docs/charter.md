@@ -16,8 +16,6 @@ date: "2024-06-01"
 * **Success criteria** – Accessible, maintainable, visually impressive.
 * **Guiding principles** – Form follows function; geometric clarity; dark-mode first; purposeful animation.
 * **Workflow** – Solo-maintained with feature branches and PR checklist.
-
-
 ---
 
 ## Immediate Next Steps
