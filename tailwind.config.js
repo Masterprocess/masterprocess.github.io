@@ -8,10 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bauhausRed: '#ff0000',
-        bauhausYellow: '#ffff00',
-        bauhausBlue: '#0000ff',
-        bauhausBlack: '#000000',
+        bauhausRed: '#d04b41',
+        bauhausYellow: '#f4d35e',
+        bauhausBlue: '#577590',
+        bauhausBlack: '#2f2f2f',
+      },
+      fontFamily: {
+        sans: ['"Josefin Sans"', 'sans-serif'],
       },
     },
   },
