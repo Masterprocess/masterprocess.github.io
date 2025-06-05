@@ -28,8 +28,22 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/docs`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        remarkPlugins: [],
+        gatsbyRemarkPlugins: [],
+      },
+    },
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-sass`,
@@ -38,4 +52,4 @@ module.exports = {
       },
     },
   ],
-}
+};
