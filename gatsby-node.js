@@ -7,6 +7,18 @@
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  createTypes(`
+    type Mdx implements Node {
+      fields: MdxFields
+    }
+    type MdxFields {
+      slug: String
+    }
+  `);
+};
+
 /**
  * Add a slug field to MDX nodes based on their file path.
  */
@@ -21,12 +33,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 /**
  * Create a page for each MDX file under docs/.
  */
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve("./src/templates/blog-post.tsx");
   const result = await graphql(`
     {
-      allMdx(sort: { frontmatter: { date: DESC } }) {
+
+      allMdx {
         nodes {
           id
           fields {
