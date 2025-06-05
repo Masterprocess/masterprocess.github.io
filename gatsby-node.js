@@ -4,8 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
  */
 
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
@@ -24,9 +24,9 @@ exports.createSchemaCustomization = ({ actions }) => {
  */
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === "Mdx") {
-    const slug = createFilePath({ node, getNode, basePath: "docs" });
-    createNodeField({ node, name: "slug", value: `/blog${slug}` });
+  if (node.internal.type === 'Mdx') {
+    const slug = createFilePath({ node, getNode, basePath: 'docs' });
+    createNodeField({ node, name: 'slug', value: `/blog${slug}` });
   }
 };
 
@@ -35,7 +35,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
  */
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const postTemplate = path.resolve("./src/templates/blog-post.tsx");
+  const postTemplate = path.resolve('./src/templates/blog-post.tsx');
   const result = await graphql(`
     {
       allMdx {

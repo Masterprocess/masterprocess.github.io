@@ -4,15 +4,19 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
 
-const React = require("react")
+const React = require('react');
 
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
 exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
-  setHtmlAttributes({ lang: `en` })
+  setHtmlAttributes({ lang: `en` });
   setHeadComponents([
-    <link key="gf-preconnect1" rel="preconnect" href="https://fonts.googleapis.com" />,
+    <link
+      key="gf-preconnect1"
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />,
     <link
       key="gf-preconnect2"
       rel="preconnect"
@@ -24,5 +28,5 @@ exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />,
-  ])
-}
+  ]);
+};

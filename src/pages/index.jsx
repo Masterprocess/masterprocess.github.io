@@ -1,10 +1,10 @@
-import * as React from "react";
-import Layout from "../components/Layout";
-import HeroBauhaus from "../components/HeroBauhaus";
-import AboutMe from "../components/AboutMe";
-import FeaturedWork from "../components/FeaturedWork";
-import ContactForm from "../components/ContactForm";
-import Seo from "../components/seo";
+import * as React from 'react';
+import Layout from '../components/Layout';
+import HeroBauhaus from '../components/HeroBauhaus';
+import AboutMe from '../components/AboutMe';
+import FeaturedWork from '../components/FeaturedWork';
+import ContactForm from '../components/ContactForm';
+import Seo from '../components/seo';
 
 const IndexPage = () => (
   <Layout>

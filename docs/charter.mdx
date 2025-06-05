@@ -1,28 +1,59 @@
 ---
 title: "Design-System Charter"
-date: "2024-06-05"
+date: "2025-06-05"
 ---
 
-# Zoe Rackley Personal Design-System Charter (v1)
+# Zoe Rackley Design-System Charter (v1)
 
 > **Purpose**  
-> A single source of truth that every later design or engineering decision references.
+> Establish a single source of truth that drives every design, accessibility, and engineering decision for my portfolio & blog.  
+> All future artifacts must trace back to — and stay within — this charter.
 
 ---
-## 0 · Discovery & Scope
+
+## 0 · Discovery & Scope
+
 | Category | Decisions & Rationale | Open Items |
-|----------|----------------------|-----------|
-| **Initial scope** | *Surfaces*: Portfolio (home, about, featured work) and Blog (MDX posts & tag pages).<br>*Audience*: recruiters, peers, friends, tech-curious visitors.<br>*Ownership*: solo-maintained (Zoe); collaborators possible later. | — |
-| **Future scope** | Interactive AI/Data demos (client-side; long-lived public APIs).<br>Spin-off microsites leveraging same design system. | Identify “first demo” concept so primitives anticipate it. |
-| **Success criteria** | 1. **Functional** – portfolio + blog shipped.<br>2. **Maintainable** – zero-config GitHub Pages deploy; automated dependency updates; tokens drive all theming.<br>3. **Accessible** – WCAG 2.2 AA baseline; full keyboard support; `prefers-reduced-motion` handled.<br>4. **Visually impressive** – Dracula-inspired dark mode + modern-poster layout; deliberate geometry; performant complex animations (≤ 80 ms main-thread).<br>5. **Playground-ready** – flexible enough for ADHD-fuelled experiments.<br>*De-prioritised*: aggressive SEO. | • Choose two objective health checks (e.g., Lighthouse ≥ 90 “Accessibility”, JS bundle < 300 kB). |
-| **Guiding principles** | • *Form follows function, then delights.*<br>• Geometric clarity over ornament.<br>• Dark-mode first (Dracula palette), light optional.<br>• Animation aids comprehension or delight—never slows UX. | Draft one-pager elaborating these principles (Layer 1). |
-| **Workflow** | Git flow: `main` (live) ← `design-system/*` feature branches.<br>PR checklist: token diff, a11y scan, optional Percy screenshot diff.<br>Roles: Designer / Dev / PM / QA = Zoe. | Decide if Storybook deploys per-PR or only on release tags. |
----
-
-## Immediate Next Steps
-
-1. **Commit this charter** to the repo at `docs/charter.md`.
-2. Draft the _Guiding Principles & Ethos_ one-pager (Layer 1).
-3. Define & automate the two “health-check” metrics noted above.
+| -------- | -------------------- | ---------- |
+| **Initial scope** | _Surfaces_: Portfolio (home, about, featured work) and Blog (MDX posts & tag pages).<br />_Audience_: recruiters, peers, friends, tech-curious visitors.<br />_Ownership_: solo-maintained (Zoe); collaborators possible later. | — |
+| **Future scope** | Interactive AI/Data demos (client-side; long-lived public APIs).<br />Spin-off microsites re-using the same design system. | Identify the first demo so primitives anticipate required interactivity. |
+| **Success criteria** | 1. **Functional** – portfolio + blog shipped.<br />2. **Maintainable** – zero-config GitHub Pages deploy; Dependabot/Renovate keep deps green; tokens drive all theming.<br />3. **Accessible** – WCAG 2.2 AA baseline; full keyboard support; `prefers-reduced-motion` handled.<br />4. **Aesthetic** – Dracula-inspired dark mode + modern-poster blocking; deliberate geometry; animations ≤ 80 ms main-thread.<br />5. **Playground-ready** – flexible enough for ADHD-fuelled experiments.<br />_De-prioritised_: aggressive SEO. | • Choose two automated health checks → Lighthouse ≥ 90 **Accessibility**, JS bundle < 300 kB gz. |
+| **Guiding principles** | • _Form follows function, then delights._<br />• Geometric clarity over ornament.<br />• Dark-mode first; light optional.<br />• Animation enhances comprehension or delight—never slows UX.<br />• Every component documented in Storybook. | Draft one-pager elaborating these principles (Layer 1). |
+| **Governance & workflow** | Git flow: `main` (live) ← `design-system/*` feature branches.<br />PR checklist: token diff, a11y scan (axe-linter), Lighthouse CI, optional Percy visual diff.<br />Roles: Designer / Dev / PM / QA = Zoe. | Decide whether Storybook deploys per-PR or only on release tags. |
 
 ---
+
+## Immediate Next Steps (v1 roadmap)
+
+1. **Commit this charter** as `docs/charter.mdx` (done).  
+2. Draft the _Guiding Principles & Ethos_ one-pager (Layer 1).  
+3. Define and automate the two health-check metrics (Lighthouse & bundle budget) in CI.  
+4. Generate design tokens (colour, spacing, typography) with Style-Dictionary → Tailwind theme.  
+5. Ship **Button**, **Link**, and **Heading/Text** primitives in Storybook; verify a11y + focus order.  
+6. Replace ad-hoc CSS with token-driven Tailwind classes on existing pages.  
+7. Schedule weekly 30-min design-system “office hours” for continuous refinement.  
+
+---
+
+### Change-log Process
+
+| Change type | SemVer bump | Release notes |
+| ----------- | ----------- | ------------- |
+| Token or visual-only tweak (no breaking prop changes) | patch | Changelog + screenshot diff |
+| New component or additive prop | minor | Usage example in Storybook |
+| Breaking API change | major | Migration doc + codemod script |
+
+---
+
+### Glossary
+
+| Term | Definition |
+| ---- | ---------- |
+| **Token** | Atomic design decision (e.g., `--color-primary`, `--space-2`). |
+| **Primitive** | Lowest-level UI element (Button, Link, Heading). |
+| **Composite** | Component composed of primitives (Card, Navbar). |
+| **Pattern** | Page-level layout (Hero, Blog Index). |
+
+---
+
+_© 2025 Zoe Rackley — Design decisions evolve, but they never drift from this charter._

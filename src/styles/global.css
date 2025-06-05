@@ -5,3 +5,10 @@
 body {
   @apply text-bodyText;
 }
+
+@layer utilities {
+  /* make prose tables readable */
+  .prose table { @apply w-full table-auto border-collapse; }
+  .prose thead th { @apply border-b border-slate-500 px-4 py-2 text-left font-semibold; }
+  .prose tbody td { @apply border-b border-slate-700/40 px-4 py-2; }
+}

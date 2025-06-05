@@ -1,26 +1,27 @@
 /**
  * Configure your Gatsby site with this file.
- *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
 
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
+/** @type {import("gatsby").GatsbyConfig} */
 module.exports = {
   siteMetadata: {
     title: `Zoe Rackley — UX Design`,
     description: `Portfolio of Bauhaus-inspired user experience projects and design explorations.`,
     author: `@gatsbyjs`,
-    siteUrl: `https://masterprocess.github.io`, // Updated to reflect my GitHub Pages URL
+    siteUrl: `https://masterprocess.github.io`, // GitHub Pages user-site URL
   },
 
-  // This repository uses a GitHub Pages user site,
-  // so assets should be served from the root URL without a path prefix.
+  // For a *user* site (username.github.io) leave pathPrefix empty or "/"
   pathPrefix: `/`,
 
   plugins: [
+    // Images
     `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+
+    // Local file sources
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -35,22 +36,25 @@ module.exports = {
         path: `${__dirname}/docs`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
+    // MDX + GitHub-flavoured Markdown (tables, task-lists, etc.)
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        remarkPlugins: [require("remark-gfm")],
-        gatsbyRemarkPlugins: [],
+        mdxOptions: {
+          remarkPlugins: [require(`remark-gfm`)],
+          // rehypePlugins: [],           // add any HTML-side plugins later
+        },
+        gatsbyRemarkPlugins: [], // if you decide to use gatsby-remark plugins
       },
     },
-    `gatsby-plugin-postcss`,
+
+    // Styling
+    `gatsby-plugin-postcss`, // Tailwind lives here
     {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        postCssPlugins: [],
-      },
+      resolve: `gatsby-plugin-sass`, // if you keep SASS around
+      options: { postCssPlugins: [] },
     },
   ],
 };

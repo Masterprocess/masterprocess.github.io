@@ -1,7 +1,7 @@
-import * as React from "react"
-import Layout from "../components/Layout"
-import ContactForm from "../components/ContactForm"
-import Seo from "../components/seo"
+import * as React from 'react';
+import Layout from '../components/Layout';
+import ContactForm from '../components/ContactForm';
+import Seo from '../components/seo';
 
 const ContactPage = () => (
   <Layout>
@@ -10,8 +10,8 @@ const ContactPage = () => (
       <ContactForm />
     </section>
   </Layout>
-)
+);
 
-export const Head = () => <Seo title="Contact" />
+export const Head = () => <Seo title="Contact" />;
 
-export default ContactPage
+export default ContactPage;

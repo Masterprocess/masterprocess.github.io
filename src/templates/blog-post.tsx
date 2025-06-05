@@ -1,7 +1,7 @@
-import * as React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Seo from "../components/seo";
+import * as React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Seo from '../components/seo';
 
 export const query = graphql`
   query BlogPost($id: String!) {

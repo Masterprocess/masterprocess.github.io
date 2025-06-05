@@ -4612,6 +4612,9 @@ const Header = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().c
   to: "/",
   className: "hover:underline"
 }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  to: "/blog",
+  className: "hover:underline"
+}, "Blog"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
   to: "/contact",
   className: "hover:underline"
 }, "Contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
@@ -4691,9 +4694,7 @@ const Layout = ({
 }) => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex min-h-screen flex-col font-sans"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", {
-    className: "flex-grow"
-  }, children), showFooter && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, children), showFooter && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
 
@@ -4720,21 +4721,21 @@ const ProjectCard = ({
 }) => {
   const renderImage = () => {
     switch (project.image) {
-      case "../images/projects/project1.svg":
+      case '../images/projects/project1.svg':
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_1__.StaticImage, {
           src: "../images/projects/project1.svg",
           alt: project.title,
           className: "w-full",
           __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/2625926758.json */ "./.cache/caches/gatsby-plugin-image/2625926758.json")
         });
-      case "../images/projects/project2.svg":
+      case '../images/projects/project2.svg':
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_1__.StaticImage, {
           src: "../images/projects/project2.svg",
           alt: project.title,
           className: "w-full",
           __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/2425373341.json */ "./.cache/caches/gatsby-plugin-image/2425373341.json")
         });
-      case "../images/projects/project3.svg":
+      case '../images/projects/project3.svg':
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_1__.StaticImage, {
           src: "../images/projects/project3.svg",
           alt: project.title,
@@ -4841,23 +4842,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const projects = [{
-  title: "Project One",
-  description: "A Bauhaus-themed dashboard interface.",
-  image: "../images/projects/project1.svg",
-  demo: "https://example.com/project-one",
-  source: "https://github.com/masterprocess/project-one"
+  title: 'Project One',
+  description: 'A Bauhaus-themed dashboard interface.',
+  image: '../images/projects/project1.svg',
+  demo: 'https://example.com/project-one',
+  source: 'https://github.com/masterprocess/project-one'
 }, {
-  title: "Project Two",
-  description: "Mobile app prototype exploring color and form.",
-  image: "../images/projects/project2.svg",
-  demo: "https://example.com/project-two",
-  source: "https://github.com/masterprocess/project-two"
+  title: 'Project Two',
+  description: 'Mobile app prototype exploring color and form.',
+  image: '../images/projects/project2.svg',
+  demo: 'https://example.com/project-two',
+  source: 'https://github.com/masterprocess/project-two'
 }, {
-  title: "Project Three",
-  description: "Experiment with geometric typography.",
-  image: "../images/projects/project3.svg",
-  demo: "https://example.com/project-three",
-  source: "https://github.com/masterprocess/project-three"
+  title: 'Project Three',
+  description: 'Experiment with geometric typography.',
+  image: '../images/projects/project3.svg',
+  demo: 'https://example.com/project-three',
+  source: 'https://github.com/masterprocess/project-three'
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (projects);
 

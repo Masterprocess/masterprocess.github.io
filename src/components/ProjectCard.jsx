@@ -1,10 +1,10 @@
-import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const ProjectCard = ({ project }) => {
   const renderImage = () => {
     switch (project.image) {
-      case "../images/projects/project1.svg":
+      case '../images/projects/project1.svg':
         return (
           <StaticImage
             src="../images/projects/project1.svg"
@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
             className="w-full"
           />
         );
-      case "../images/projects/project2.svg":
+      case '../images/projects/project2.svg':
         return (
           <StaticImage
             src="../images/projects/project2.svg"
@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
             className="w-full"
           />
         );
-      case "../images/projects/project3.svg":
+      case '../images/projects/project3.svg':
         return (
           <StaticImage
             src="../images/projects/project3.svg"

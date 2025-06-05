@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 
 const Header = () => (
   <header className="bg-bauhausRed text-white">
@@ -8,10 +8,18 @@ const Header = () => (
         Zoe Rackley
       </Link>
       <nav className="flex flex-wrap space-x-4">
-        <Link to="/" className="hover:underline">Home</Link>
-        <Link to="/blog" className="hover:underline">Blog</Link>
-        <Link to="/contact" className="hover:underline">Contact</Link>
-        <Link to="/resume" className="hover:underline">Resume</Link>
+        <Link to="/" className="hover:underline">
+          Home
+        </Link>
+        <Link to="/blog" className="hover:underline">
+          Blog
+        </Link>
+        <Link to="/contact" className="hover:underline">
+          Contact
+        </Link>
+        <Link to="/resume" className="hover:underline">
+          Resume
+        </Link>
       </nav>
     </div>
   </header>

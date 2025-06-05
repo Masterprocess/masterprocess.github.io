@@ -1,5 +1,5 @@
-import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const AboutMe = () => (
   <section id="about" className="container mx-auto px-4 py-8 bg-gray-100">
