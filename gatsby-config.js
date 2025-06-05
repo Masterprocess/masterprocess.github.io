@@ -4,6 +4,8 @@
  */
 
 /** @type {import("gatsby").GatsbyConfig} */
+const remarkGfm = require("remark-gfm");
+
 module.exports = {
   siteMetadata: {
     title: `Zoe Rackley — UX Design`,
@@ -43,7 +45,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         mdxOptions: {
-          remarkPlugins: [require(`remark-gfm`)],
+          remarkPlugins: [remarkGfm],
           // rehypePlugins: [],           // add any HTML-side plugins later
         },
         gatsbyRemarkPlugins: [], // if you decide to use gatsby-remark plugins
