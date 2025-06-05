@@ -1,8 +1,19 @@
 exports.components = {
-  "component---src-pages-404-js": () => import("./../../../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
-  "component---src-pages-contact-jsx": () => import("./../../../src/pages/contact.jsx" /* webpackChunkName: "component---src-pages-contact-jsx" */),
-  "component---src-pages-index-jsx": () => import("./../../../src/pages/index.jsx" /* webpackChunkName: "component---src-pages-index-jsx" */),
-  "component---src-pages-resume-jsx": () => import("./../../../src/pages/resume.jsx" /* webpackChunkName: "component---src-pages-resume-jsx" */),
-  "component---src-templates-using-dsg-js": () => import("./../../../src/templates/using-dsg.js" /* webpackChunkName: "component---src-templates-using-dsg-js" */)
+  "component---cache-dev-404-page-js": () => import("./../../dev-404-page.js?export=default" /* webpackChunkName: "component---cache-dev-404-page-js" */),
+  "component---src-pages-404-js": () => import("./../../../src/pages/404.js?export=default" /* webpackChunkName: "component---src-pages-404-js" */),
+  "component---src-pages-contact-jsx": () => import("./../../../src/pages/contact.jsx?export=default" /* webpackChunkName: "component---src-pages-contact-jsx" */),
+  "component---src-pages-index-jsx": () => import("./../../../src/pages/index.jsx?export=default" /* webpackChunkName: "component---src-pages-index-jsx" */),
+  "component---src-pages-resume-jsx": () => import("./../../../src/pages/resume.jsx?export=default" /* webpackChunkName: "component---src-pages-resume-jsx" */),
+  "component---src-templates-using-dsg-js": () => import("./../../../src/templates/using-dsg.js?export=default" /* webpackChunkName: "component---src-templates-using-dsg-js" */)
+}
+
+
+
+exports.head = {
+  "component---src-pages-404-js": () => import("./../../../src/pages/404.js?export=head" /* webpackChunkName: "component---src-pages-404-jshead" */),
+  "component---src-pages-contact-jsx": () => import("./../../../src/pages/contact.jsx?export=head" /* webpackChunkName: "component---src-pages-contact-jsxhead" */),
+  "component---src-pages-index-jsx": () => import("./../../../src/pages/index.jsx?export=head" /* webpackChunkName: "component---src-pages-index-jsxhead" */),
+  "component---src-pages-resume-jsx": () => import("./../../../src/pages/resume.jsx?export=head" /* webpackChunkName: "component---src-pages-resume-jsxhead" */),
+  "component---src-templates-using-dsg-js": () => import("./../../../src/templates/using-dsg.js?export=head" /* webpackChunkName: "component---src-templates-using-dsg-jshead" */)
 }
 
