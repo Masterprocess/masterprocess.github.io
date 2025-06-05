@@ -33,16 +33,17 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 /**
  * Create a page for each MDX file under docs/.
  */
-
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve("./src/templates/blog-post.tsx");
   const result = await graphql(`
     {
-
       allMdx {
         nodes {
           id
+          internal {
+            contentFilePath
+          }
           fields {
             slug
           }
@@ -52,8 +53,11 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   if (result.errors) throw result.errors;
-
-  result.data.allMdx.nodes.forEach(({ id, fields: { slug } }) => {
-    createPage({ path: slug, component: postTemplate, context: { id } });
+  result.data.allMdx.nodes.forEach(({ id, internal, fields: { slug } }) => {
+    createPage({
+      path: slug,
+      component: `${postTemplate}?__contentFilePath=${internal.contentFilePath}`,
+      context: { id },
+    });
   });
 };
