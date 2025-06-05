@@ -33,11 +33,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 /**
  * Create a page for each MDX file under docs/.
  */
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve("./src/templates/blog-post.tsx");
   const result = await graphql(`
     {
+
       allMdx {
         nodes {
           id
