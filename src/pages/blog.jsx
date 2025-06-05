@@ -5,7 +5,7 @@ import Seo from "../components/seo";
 
 export const query = graphql`
   {
-    allMdx(sort: { frontmatter: { date: DESC } }) {
+    allMdx {
       nodes {
         frontmatter {
           title
