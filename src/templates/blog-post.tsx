@@ -29,7 +29,7 @@ export default function BlogPost({
   const { frontmatter } = data.mdx;
   return (
     <Layout>
-      <article className="prose md:prose-lg mx-auto dark:prose-invert">
+      <article className="prose md:prose-lg mx-auto">
         <h1>{frontmatter.title}</h1>
         <p className="text-sm opacity-70">{frontmatter.date}</p>
         {children}
