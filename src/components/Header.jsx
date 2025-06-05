@@ -9,6 +9,7 @@ const Header = () => (
       </Link>
       <nav className="flex flex-wrap space-x-4">
         <Link to="/" className="hover:underline">Home</Link>
+        <Link to="/blog" className="hover:underline">Blog</Link>
         <Link to="/contact" className="hover:underline">Contact</Link>
         <Link to="/resume" className="hover:underline">Resume</Link>
       </nav>
