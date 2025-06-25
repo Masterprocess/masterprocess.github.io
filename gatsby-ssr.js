@@ -28,5 +28,16 @@ exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />,
+    <link
+      key="gf-preload-dm-inter-ibm"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter&family=IBM+Plex+Mono&display=swap"
+      as="style"
+    />,
+    <link
+      key="gf-dm-inter-ibm"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter&family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />,
   ]);
 };
