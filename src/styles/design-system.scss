@@ -1,1 +1,21 @@
-/* Placeholder for future design system styles */
+:root {
+  --space-1: 6px;
+  --space-2: 12px;
+}
+
+/* Grid utility for 12 equal columns */
+.grid-cols-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--space-1);
+}
+
+/* Generic wrapper constraining content width */
+.content-wrapper {
+  width: 100%;
+  max-width: 72ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+}
