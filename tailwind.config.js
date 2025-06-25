@@ -53,6 +53,10 @@ module.exports = {
           },
         },
       }),
+      spacing: {
+        'space-1': '6px',
+        'space-2': '12px',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
