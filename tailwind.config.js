@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
     './gatsby-ssr.js',
@@ -8,14 +9,28 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bauhausRed: '#d04b41',
-        bauhausYellow: '#f4d35e',
-        bauhausBlue: '#577590',
-        bauhausBlack: '#2f2f2f',
+        bauhaus: {
+          red: '#d04b41',
+          yellow: '#f4d35e',
+          blue: '#577590',
+          black: '#2f2f2f',
+        },
         bodyText: '#000000',
+        noir: {
+          background: '#121212',
+          surface: '#181818',
+          text: '#e8e6e3',
+          accent: '#8be9fd',
+        },
       },
       fontFamily: {
         sans: ['"Josefin Sans"', 'sans-serif'],
+        serifDisplay: ['"DM Serif Display"', 'serif'],
+        inter: ['Inter', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
+      },
+      boxShadow: {
+        'inner-dark': 'inset 0 0 0 1px rgba(0,0,0,.8)',
       },
       typography: ({ theme }) => ({
         DEFAULT: {
