@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const Navbar = () => (
-  <header className="bg-bauhausRed text-white">
+  <header className="bg-noir-surface text-noir-text">
     <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-4">
       <Link to="/" className="font-bold hover:underline">
         Zoe Rackley

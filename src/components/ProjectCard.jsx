@@ -39,10 +39,10 @@ const ProjectCard = ({ project }) => {
       <h3 className="text-xl font-semibold">{project.title}</h3>
       <p className="text-gray-700">{project.description}</p>
       <div className="space-x-4">
-        <a href={project.demo} className="text-bauhausBlue underline">
+        <a href={project.demo} className="text-noir-accent underline">
           Demo
         </a>
-        <a href={project.source} className="text-bauhausRed underline">
+        <a href={project.source} className="text-noir-accent underline">
           Code
         </a>
       </div>

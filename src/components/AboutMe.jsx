@@ -11,9 +11,9 @@ const AboutMe = () => (
         className="h-32 w-32 rounded-full"
       />
       <p className="text-gray-700">
-        Hello! I'm Zoe Rackley, a UX designer fascinated by the principles of
-        Bauhaus design. I enjoy blending geometry, color, and usability to craft
-        engaging digital experiences.
+        Hello! I'm Zoe Rackley, a UX designer exploring a noir aesthetic with
+        glitch vibes and VTM flair. Geometry, motion and accessibility guide my
+        work.
       </p>
     </div>
   </section>
