@@ -33,7 +33,7 @@ const ContactForm: React.FC = () => (
     </div>
     <button
       type="submit"
-      className="rounded bg-bauhausBlue px-4 py-2 font-semibold text-white"
+      className="rounded bg-noir-accent px-4 py-2 font-semibold text-noir-background"
     >
       Send
     </button>

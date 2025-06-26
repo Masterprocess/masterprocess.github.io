@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import HeroBauhaus from '../components/HeroBauhaus';
+import HeroNoir from '../components/HeroNoir';
 import AboutMe from '../components/AboutMe';
 import FeaturedWork from '../components/FeaturedWork';
 import ContactForm from '../components/ContactForm';
@@ -8,8 +8,8 @@ import Seo from '../components/seo';
 
 const IndexPage = () => (
   <Layout>
-    <HeroBauhaus
-      intro="Bauhaus-inspired interfaces and user experiences."
+    <HeroNoir
+      intro="Noir-glitch-vtm themed interfaces and experiments."
       ctaText="Contact Me"
       ctaLink="#contact"
     />

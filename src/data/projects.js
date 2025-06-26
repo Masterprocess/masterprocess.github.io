@@ -1,7 +1,7 @@
 const projects = [
   {
     title: 'Project One',
-    description: 'A Bauhaus-themed dashboard interface.',
+    description: 'A noir dashboard experiment with glitch accents.',
     image: '../images/projects/project1.svg',
     demo: 'https://example.com/project-one',
     source: 'https://github.com/masterprocess/project-one',

@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `Zoe Rackley — UX Design`,
-    description: `Portfolio of Bauhaus-inspired user experience projects and design explorations.`,
+    description: `Portfolio of noir-glitch-vtm experiments and design explorations.`,
     author: `@gatsbyjs`,
     siteUrl: `https://masterprocess.github.io`, // GitHub Pages user-site URL
   },
