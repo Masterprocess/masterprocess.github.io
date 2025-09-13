@@ -1,4 +1,4 @@
-import { forwardRef, useState, useRef, useEffect } from 'react';
+import React, { forwardRef, useState, useRef, useEffect } from 'react';
 import { ExternalLink, Eye, Award, TrendingUp, Users, Calendar } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 

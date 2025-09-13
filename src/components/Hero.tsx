@@ -1,5 +1,5 @@
+import React, { useState, useEffect, useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface HeroProps {

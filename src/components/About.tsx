@@ -1,3 +1,4 @@
+import React from 'react';
 import { Award, Users, Clock, Target } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 

@@ -6,6 +6,7 @@
 
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
+const webpack = require('webpack');
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
@@ -60,4 +61,24 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { id },
     });
   });
+};
+
+// Ensure React is available globally for third-party libraries that expect it
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
+  const config = {
+    plugins: [new webpack.ProvidePlugin({ React: 'react' })],
+  };
+
+  if (stage === 'build-html') {
+    config.module = {
+      rules: [
+        {
+          test: /lucide-react/,
+          use: ['null-loader'],
+        },
+      ],
+    };
+  }
+
+  actions.setWebpackConfig(config);
 };
