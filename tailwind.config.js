@@ -17,10 +17,10 @@ module.exports = {
         },
         bodyText: '#000000',
         noir: {
-          background: '#121212',
-          surface: '#181818',
-          text: '#e8e6e3',
-          accent: '#8be9fd',
+          background: 'var(--background)',
+          surface: 'var(--card)',
+          text: 'var(--foreground)',
+          accent: 'var(--noir-red)',
         },
       },
       fontFamily: {
