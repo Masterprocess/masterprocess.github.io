@@ -101,6 +101,25 @@ const DarkNoirPortfolio = forwardRef<HTMLElement>((_, forwardedRef) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const localRef = useRef<HTMLElement | null>(null);
 
+  const activateProject = (id: number) => {
+    setActiveProject(id);
+  };
+
+  const deactivateProject = (id: number) => {
+    setActiveProject(previous => (previous === id ? null : previous));
+  };
+
+  const toggleProject = (id: number) => {
+    setActiveProject(previous => (previous === id ? null : id));
+  };
+
+  const handleKeyToggle = (event: React.KeyboardEvent<HTMLDivElement>, id: number) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleProject(id);
+    }
+  };
+
   useEffect(() => {
     if (typeof document === 'undefined') {
       return undefined;
@@ -167,13 +186,28 @@ const DarkNoirPortfolio = forwardRef<HTMLElement>((_, forwardedRef) => {
           {projects.map((project, index) => {
             const isEven = index % 2 === 0;
             const isActive = activeProject === project.id;
+            const overlayId = `project-actions-${project.id}`;
 
             return (
               <div
                 key={project.id}
                 className="group relative items-center lg:grid lg:grid-cols-12 lg:gap-16"
-                onMouseEnter={() => setActiveProject(project.id)}
-                onMouseLeave={() => setActiveProject(null)}
+                tabIndex={0}
+                role="group"
+                aria-label={`${project.title} project`}
+                aria-expanded={isActive}
+                onMouseEnter={() => activateProject(project.id)}
+                onMouseLeave={() => deactivateProject(project.id)}
+                onFocus={() => activateProject(project.id)}
+                onBlur={() => deactivateProject(project.id)}
+                onClick={event => {
+                  const target = event.target as Element;
+                  if (target.closest('[data-project-overlay-control="true"]')) {
+                    return;
+                  }
+                  toggleProject(project.id);
+                }}
+                onKeyDown={event => handleKeyToggle(event, project.id)}
               >
                 <div className={`relative mb-12 lg:col-span-7 lg:mb-0 ${isEven ? '' : 'lg:col-start-6'}`}>
                   <div className="relative">
@@ -209,18 +243,44 @@ const DarkNoirPortfolio = forwardRef<HTMLElement>((_, forwardedRef) => {
                       {String(index + 1).padStart(2, '0')}
                     </div>
 
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 transition-all duration-500 group-hover:opacity-100">
+                    <button
+                      type="button"
+                      data-project-overlay-control="true"
+                      onClick={event => {
+                        event.stopPropagation();
+                        toggleProject(project.id);
+                      }}
+                      className="absolute bottom-6 left-6 z-20 flex items-center space-x-2 rounded-full bg-black/70 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500"
+                      aria-controls={overlayId}
+                      aria-expanded={isActive}
+                    >
+                      <Eye aria-hidden="true" size={18} />
+                      <span>{isActive ? 'Hide actions' : 'View actions'}</span>
+                    </button>
+
+                    <div
+                      id={overlayId}
+                      aria-hidden={!isActive}
+                      className={`absolute inset-0 z-10 flex items-center justify-center bg-black/80 transition-all duration-500 ${
+                        isActive ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                      } group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto`}
+                    >
                       <div className="flex space-x-6">
                         <button
                           type="button"
-                          className="dramatic-shadow magnetic bg-white p-6 text-black transition-all duration-300 hover:bg-red-500 hover:text-white"
+                          aria-label="Preview project"
+                          data-project-overlay-control="true"
+                          onClick={event => event.stopPropagation()}
+                          className="dramatic-shadow magnetic bg-white p-6 text-black transition-all duration-300 hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500"
                         >
                           <Eye size={24} />
                         </button>
                         <button
                           type="button"
                           aria-label="Open project"
-                          className="dramatic-shadow magnetic bg-white p-6 text-black transition-all duration-300 hover:bg-red-500 hover:text-white"
+                          data-project-overlay-control="true"
+                          onClick={event => event.stopPropagation()}
+                          className="dramatic-shadow magnetic bg-white p-6 text-black transition-all duration-300 hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500"
                         >
                           <ExternalLink size={24} />
                         </button>
