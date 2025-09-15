@@ -20,7 +20,7 @@ const stats = [
 ];
 
 const DarkNoirAbout = forwardRef<HTMLElement>((_, ref) => (
-  <section ref={ref} id="about" className="min-h-screen bg-black pt-16 text-white">
+  <section ref={ref} id="about" className="min-h-screen bg-black pt-16 text-white scroll-mt-28">
     <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
       <div className="mb-20">
         <h2 className="mb-6 text-4xl md:text-5xl">About</h2>
