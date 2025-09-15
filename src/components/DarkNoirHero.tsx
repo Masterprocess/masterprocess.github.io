@@ -82,7 +82,7 @@ const DarkNoirHero = forwardRef<HTMLElement, HeroProps>(({ onScrollToWork }, for
               <div className="space-y-8">
                 <div className="text-reveal revealed">
                   <div className="text-reveal-inner">
-                    <h1 className="text-6xl leading-[0.85] tracking-tighter text-white md:text-7xl lg:text-8xl xl:text-9xl">
+                    <h1 className="break-words text-[clamp(2.5rem,_5.5vw+1rem,_6.5rem)] leading-[0.85] tracking-tighter text-white">
                       Creative
                     </h1>
                   </div>
@@ -91,7 +91,7 @@ const DarkNoirHero = forwardRef<HTMLElement, HeroProps>(({ onScrollToWork }, for
                 <div className="text-reveal revealed ml-8" style={{ animationDelay: '0.2s' }}>
                   <div className="text-reveal-inner">
                     <span
-                      className="glitch text-6xl font-bold leading-[0.85] tracking-tighter text-red-500 md:text-7xl lg:text-8xl xl:text-9xl"
+                      className="glitch break-words text-[clamp(2.5rem,_5.5vw+1rem,_6.5rem)] font-bold leading-[0.85] tracking-tighter text-red-500"
                       data-text={words[currentWord]}
                     >
                       {words[currentWord]}
@@ -102,7 +102,7 @@ const DarkNoirHero = forwardRef<HTMLElement, HeroProps>(({ onScrollToWork }, for
 
               <div className="text-reveal revealed" style={{ animationDelay: '0.4s' }}>
                 <div className="text-reveal-inner">
-                  <p className="max-w-2xl text-xl font-light leading-relaxed text-gray-300 md:text-2xl">
+                  <p className="max-w-2xl break-words text-[clamp(1rem,_1vw+1rem,_1.5rem)] font-light leading-relaxed text-gray-300">
                     Pushing the boundaries of digital design through
                     <span className="italic text-white"> experimental interfaces</span>, data-driven solutions, and
                     <span className="text-red-500"> award-winning experiences</span>.
@@ -114,15 +114,15 @@ const DarkNoirHero = forwardRef<HTMLElement, HeroProps>(({ onScrollToWork }, for
                 <div className="text-reveal-inner">
                   <div className="grid max-w-md grid-cols-3 gap-8">
                     <div className="text-center">
-                      <div className="mb-1 text-3xl font-bold text-white">150+</div>
+                      <div className="mb-1 break-words text-[clamp(1.75rem,_3vw,_2.5rem)] font-bold text-white">150+</div>
                       <div className="text-sm uppercase tracking-wider text-gray-400">Projects</div>
                     </div>
                     <div className="text-center">
-                      <div className="mb-1 text-3xl font-bold text-white">15+</div>
+                      <div className="mb-1 break-words text-[clamp(1.75rem,_3vw,_2.5rem)] font-bold text-white">15+</div>
                       <div className="text-sm uppercase tracking-wider text-gray-400">Awards</div>
                     </div>
                     <div className="text-center">
-                      <div className="mb-1 text-3xl font-bold text-white">8+</div>
+                      <div className="mb-1 break-words text-[clamp(1.75rem,_3vw,_2.5rem)] font-bold text-white">8+</div>
                       <div className="text-sm uppercase tracking-wider text-gray-400">Years</div>
                     </div>
                   </div>
@@ -134,7 +134,7 @@ const DarkNoirHero = forwardRef<HTMLElement, HeroProps>(({ onScrollToWork }, for
                   <button
                     type="button"
                     onClick={onScrollToWork}
-                    className="magnetic group relative inline-flex items-center space-x-4 overflow-hidden bg-gradient-to-r from-red-600 to-red-500 px-12 py-6 text-lg font-medium text-white transition-all duration-500 hover:scale-105 dramatic-shadow"
+                    className="magnetic group relative inline-flex items-center space-x-4 overflow-hidden bg-gradient-to-r from-red-600 to-red-500 px-12 py-6 text-[clamp(1rem,_0.5vw+0.95rem,_1.2rem)] font-medium text-white transition-all duration-500 hover:scale-105 dramatic-shadow"
                   >
                     <span className="relative z-10">Explore My Work</span>
                     <ArrowDown size={24} className="relative z-10 transition-transform duration-300 group-hover:translate-y-1" />
