@@ -217,12 +217,13 @@ const DarkNoirPortfolio = forwardRef<HTMLElement>((_, forwardedRef) => {
                         >
                           <Eye size={24} />
                         </button>
-                        <a
-                          href="#"
+                        <button
+                          type="button"
+                          aria-label="Open project"
                           className="dramatic-shadow magnetic bg-white p-6 text-black transition-all duration-300 hover:bg-red-500 hover:text-white"
                         >
                           <ExternalLink size={24} />
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
