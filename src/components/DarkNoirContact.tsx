@@ -18,14 +18,18 @@ const contactInfo = [
     icon: MapPin,
     label: 'Based in',
     value: 'New York, NY',
-    href: '#',
+    href: 'https://www.google.com/maps/place/New+York,+NY',
   },
 ];
 
 const socialLinks = [
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Github, href: '#', label: 'GitHub' },
+  {
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/in/noir-creative-director',
+    label: 'LinkedIn',
+  },
+  { icon: Twitter, href: 'https://twitter.com/noir_creative', label: 'Twitter' },
+  { icon: Github, href: 'https://github.com/noir-creative', label: 'GitHub' },
 ];
 
 interface FormData {
@@ -99,6 +103,8 @@ const DarkNoirContact = forwardRef<HTMLElement>((_, ref) => {
                     key={link.label}
                     href={link.href}
                     aria-label={link.label}
+                    target="_blank"
+                    rel="noreferrer"
                     className="noir-border flex h-12 w-12 items-center justify-center bg-gray-900 text-gray-400 transition-all duration-300 hover:bg-red-500 hover:text-white"
                   >
                     <link.icon size={20} />
