@@ -184,7 +184,7 @@ const DarkNoirHero = forwardRef<HTMLElement, HeroProps>(({ onScrollToWork }, for
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform text-center">
+      <div className="absolute bottom-20 sm:bottom-24 left-1/2 -translate-x-1/2 transform text-center z-20">
         <div className="animate-bounce">
           <div className="flex h-10 w-6 justify-center rounded-full border-2 border-gray-600">
             <div className="mt-2 h-3 w-1 animate-pulse rounded-full bg-red-500" />
