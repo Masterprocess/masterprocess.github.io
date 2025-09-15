@@ -133,7 +133,7 @@ const DarkNoirPortfolio = forwardRef<HTMLElement>((_, forwardedRef) => {
     <section
       ref={setRefs}
       id="work"
-      className="relative overflow-hidden bg-gradient-to-b from-black via-gray-950 to-black py-32 film-grain"
+      className="relative overflow-hidden bg-gradient-to-b from-black via-gray-950 to-black py-32 film-grain scroll-mt-28"
     >
       <div
         className="absolute h-96 w-96 rounded-full bg-red-500 opacity-[0.03] blur-3xl transition-all duration-1000"
