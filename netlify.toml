@@ -1,8 +1,0 @@
-[build]
-base = "focal"
-command = "npm ci && npm run build"
-publish = "public"
-
-[build.environment]
-  NODE_VERSION = "18"
-
