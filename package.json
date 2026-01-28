@@ -31,6 +31,7 @@
     "@mantine/notifications": "^8.3.13",
     "@mantinex/dev-icons": "^2.0.0",
     "@mantinex/mantine-logo": "^2.0.0",
+    "@tabler/icons": "^3.36.1",
     "@tabler/icons-react": "^3.36.1",
     "dayjs": "^1.11.19",
     "react": "^19.2.0",

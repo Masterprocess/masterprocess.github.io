@@ -22,7 +22,7 @@ jobs:
       - name: Enable Corepack
         run: corepack enable
       - name: Install dependencies
-        run: yarn install --immutable
+        run: yarn install --no-lockfile
       - name: Run build
         run: yarn build
       - name: Run tests
