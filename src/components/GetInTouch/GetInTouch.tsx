@@ -7,7 +7,7 @@ export function GetInTouch() {
   return (
     <Paper shadow="md" radius="lg">
       <div className={classes.wrapper}>
-        <div className={classes.contacts} style={{ backgroundImage: `url(${bg.src})` }}>
+        <div className={classes.contacts} style={{ backgroundImage: `url(${bg})` }}>
           <Text fz="lg" fw={700} className={classes.title} c="#fff">
             Contact information
           </Text>
