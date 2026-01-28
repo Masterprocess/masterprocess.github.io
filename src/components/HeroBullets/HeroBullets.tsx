@@ -49,7 +49,7 @@ export function HeroBullets() {
             </Button>
           </Group>
         </div>
-        <Image src={image.src} className={classes.image} alt="" />
+        <Image src={image} className={classes.image} alt="" />
       </div>
     </Container>
   );

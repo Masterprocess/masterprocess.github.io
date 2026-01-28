@@ -4,8 +4,8 @@ import sea from './sea.png';
 import winter from './winter.png';
 
 export default {
-  city: city.src,
-  mountain: mountain.src,
-  sea: sea.src,
-  winter: winter.src,
+  city,
+  mountain,
+  sea,
+  winter,
 };
