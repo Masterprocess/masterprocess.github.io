@@ -17,13 +17,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
-          cache: 'yarn'
-          cache-dependency-path: '**/yarn.lock'
-      - name: Enable Corepack
-        run: corepack enable
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        run: yarn install --immutable
+        run: npm ci
       - name: Run build
-        run: yarn build
+        run: npm run build
       - name: Run tests
-        run: yarn test
+        run: npm run test
